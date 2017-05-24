@@ -1,0 +1,26 @@
+<div ng-controller="ordersCtrl">
+    <div ng-if="orders.length">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Products count</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="order in orders | startFrom:(currentPage-1)*pageSize | limitTo:pageSize">
+                    <td>{{order.title}}</td>
+                    <td>{{order.count}}</td>
+                    <td>{{order.total}} Р.</td>
+                </tr>
+            </tbody>
+        </table>
+        <ul class="pagination">
+            <li ng-repeat="i in numberOfPages() track by $index" ng-class="{active : currentPage == $index + 1}"><a href="" ng-click="setPage($index + 1)">{{$index + 1}}</a></li>
+        </ul>
+    </div>
+    <div ng-if="!orders.length">
+        У вас нет заказов!
+    </div>
+</div>

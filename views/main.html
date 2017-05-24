@@ -1,0 +1,12 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li ng-class="{active : activeLink == 'profile'}"><a href="" ng-click="changeView('profile')">Profile</a></li>
+                <li ng-class="{active : activeLink == 'orders'}"><a href="" ng-click="changeView('orders')">Orders</a></li>
+            </ul>
+            <a href="" id="logout-link" ng-click="logOut()">Выйти</a>
+        </div>
+    </div>
+</nav>
+<div class="jumbotron" ng-include="'views/' + currentView + '.html'"></div>

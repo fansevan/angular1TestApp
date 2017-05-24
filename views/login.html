@@ -1,0 +1,11 @@
+<div ng-controller="loginCtrl">
+	<form name="loginForm" class="form-signin" novalidate ng-submit="autorize()">
+	    <h2 class="form-signin-heading">Please sign in</h2>
+	    <input name="email" maxlength="255" type="email" class="form-control" placeholder="Email address" required autofocus ng-model='loginUser.email'>
+	    <input name="password" maxlength="255" type="password" class="form-control" placeholder="Password" required ng-model='loginUser.password'>
+	    <label class="checkbox">
+	        <input type="checkbox" name="remember" ng-model="loginUser.remember"> Remember me
+	    </label>
+	    <button class="btn btn-lg btn-primary btn-block" type="submit" ng-disabled="loginForm.$invalid">Sign in</button>
+	</form>
+</div>

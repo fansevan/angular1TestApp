@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="testApp">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Test App</title>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+	<script src="js/libs/angular.min.js"></script>
+	<script src="js/libs/angular-route.min.js"></script>
+	<script src="js/libs/angular-cookies.min.js"></script>
+	
+	<script src="js/app.js"></script>
+	<script src="js/Controller/mainCtrl.js"></script>
+	<script src="js/Controller/loginCtrl.js"></script>
+	<script src="js/Controller/profileCtrl.js"></script>
+	<script src="js/Controller/ordersCtrl.js"></script>
+	<script src="js/Service/authSrv.js"></script>
+	<script src="js/Service/restSrv.js"></script>
+	<script src="js/Filter/startFromFilter.js"></script>
+</head>
+<body ng-controller="mainCtrl">
+	<div class="container">
+		<ng-view></ng-view>
+	</div>
+</body>
+</html>
